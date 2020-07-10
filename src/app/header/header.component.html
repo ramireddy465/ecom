@@ -1,0 +1,46 @@
+<div class="divcon">
+
+    <div >
+    
+        <input type="text" >
+    
+    
+    </div>
+    
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          cart<span>({{products.length}})</span>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+            <div *ngFor= "let product of products">
+
+                <div style="padding: 10px;display: flex;">
+                    <p>  {{product.name}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>{{product.price}}</p>&nbsp;&nbsp;&nbsp;&nbsp;
+               <button (click)="minose(product)">decrease</button> 
+               <button (click)="plus(product)">increase</button>
+               <p>{{product.quantity}}</p>&nbsp;&nbsp;&nbsp;&nbsp; 
+
+                    <button (click) = "remove(product)">remove</button>
+                    
+                    
+                    
+                
+                </div>
+
+               
+            
+               
+            </div>
+
+            <span>totalAmount = {{totalAmount}}</span><br><br>
+            <button (click) ="cart()" routerLink="/cart" >view cart</button>
+          
+        </div>
+      </div>
+
+    </div>
+
+
+  

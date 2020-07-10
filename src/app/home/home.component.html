@@ -1,0 +1,12 @@
+<div *ngFor= "let product of products" (click)="pdetail(product)" style="display: inline-flex;" [routerLink]="['/product-details', product.name]" >
+
+    <div style="padding: 70px;border: 1px solid gray;" >
+        <p>{{product.name}}</p>
+        <p>{{product.price}}</p>
+        <p>{{product.color}}</p>
+        <button (click)="addtocart(product)">add to cart</button>
+    
+    </div>
+
+   
+</div>

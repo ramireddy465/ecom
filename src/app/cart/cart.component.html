@@ -1,0 +1,33 @@
+
+<div *ngFor= "let product of productsx">
+
+    <div style="padding: 10px;">
+        <p> name: {{product.name}}</p>
+        <p>price:{{product.price}}</p>
+        <p>Quantity:{{product.quantity}}</p>
+   <button (click)="minose(product)">decrease</button> |
+   <button (click)="plus(product)">increase</button>|
+   <button (click) = "remove(product)">remove</button>
+    
+    </div>
+
+    <div style="margin-left: 300px;">
+
+        total price = {{product.quantity * product.price }}
+    
+    </div>
+
+   
+---------------------------------------------------------
+   
+
+
+</div>
+
+<br>
+
+
+                                                         <span style="margin-left: 400px;">Total = {{total}} </span>       
+
+                                                         <br>
+                                                         <br>

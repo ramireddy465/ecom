@@ -1,0 +1,6 @@
+.divcon{
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+}
